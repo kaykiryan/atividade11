@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+    <h1 id="começo">responda algumas perguntas para acessar nosso site!</h1>
+</div>
+
+    <input type="text" id="nome" size="30px" maxlength="30" placeholder="escreva seu nome"> </input>
+    <input type="text" id="Idade" size="30px" maxlength="30" placeholder="escreva sua idade"> </input>
+    <button onclick="ok" id="botao">ok</button> <br>
+    
+
+    primeiro numero <br />
+    <input id="n1" type="number"  /><br  /><br  />
+    segundo numero <br />
+    <input id="n2" type="number"  /><br  /><br  />
+    <button onclick="somar()">somar</button>
+    <button onclick="subtrair()">subtrair</button>
+    <button onclick="multiplicar()">multiplicar</button>
+    <button onclick="dividir()">dividir</button>
+
+    o resultado e <span></span> <br />
+    <script>
+
+const botao = document.querySelector('#botao');
+const nome = document.querySelector('#nome')
+            const Idade = document.querySelector('#Idade')
+            const sla = document.createElement("div")  
+             const texto  = document.createElement("h1") 
+           
+           
+  function bemvindo(){
+    const texto2 = document.createTextNode(`Seja bem vindo ${nome.value}, voce tem ${Idade.value},anos  aproveite nosso site `) 
+
+       texto.appendChild(texto2)
+         sla.appendChild(texto)
+         document.body.appendChild(sla)
+
+         console.log()
+         
+        
+          
+               
+        }
+       
+
+        
+
+botao.onclick = bemvindo;
+
+    
+   var n1 = document.querySelector('#n1')
+   var n2 = document.querySelector('#n2')
+   var resultado = document.querySelector('span')
+
+   function somar () {
+
+       var N1 = Number(n1.value)
+       var N2 = Number(n2.value)
+       resultado.innerHTML = N1 + N2
+    }
+
+    function subtrair () {
+
+var N1 = Number(n1.value)
+var N2 = Number(n2.value)
+resultado.innerHTML = N1 - N2
+}
+
+    function multiplicar () {
+
+var N1 = Number(n1.value)
+var N2 = Number(n2.value)
+resultado.innerHTML = N1 * N2
+}
+
+function dividir () {
+
+var N1 = Number(n1.value)
+var N2 = Number(n2.value)
+resultado.innerHTML = N1 / N2
+}
+
+
+       
+        
+    </script>
+</body>
+</html>
